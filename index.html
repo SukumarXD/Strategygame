@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategy - Juego de mesa matemático</title>
+  <!-- Vinculación al archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <h1>STRATEGY</h1>
+    <nav>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#como-jugar">Cómo Jugar</a>
+      <a href="#comprar">Comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Aprender matemáticas nunca fue tan divertido</h1>
+    <p>Un juego de mesa diseñado para enseñar matemáticas</p>
+    <button>Compra AQUÍ!!!</button>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Oferta solo por hoy!!!</h2>
+      <p>
+        SOLO PARA COMPRAS ONLINE: llevate 1 unidad con un 30% de dcto
+      </p>
+      <h2>Encuentranos en la próxima feria educativa más cercana</h2>
+      <p>Visitanos para más información</p>
+    </div>
+  </div>
+
+  <!-- Modal de solicitud de información -->
+<div id="modal-compra" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Solicita tu compra</h2>
+    
+    <p>Selecciona el tipo de comprador:</p>
+    <select id="tipo-comprador">
+      <option value="">--Selecciona--</option>
+      <option value="familia">Familia</option>
+      <option value="institucion">Institución educativa</option>
+    </select>
+
+    <!-- Formulario para familias -->
+    <form id="form-familia" class="formulario" style="display:none;">
+      <p>Información familiar:</p>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="tel" placeholder="Teléfono" required>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Formulario para instituciones -->
+    <form id="form-institucion" class="formulario" style="display:none;">
+      <p>Información de la institución:</p>
+      <input type="text" placeholder="Nombre de la institución" required>
+      <input type="text" placeholder="Cargo / Responsable" required>
+      <input type="email" placeholder="Correo institucional" required>
+      <input type="tel" placeholder="Teléfono" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+  <section id="beneficios" class="section">
+    <h2>Beneficios</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Para Instituciones</h3>
+        <p>- Refuerza el pensamiento lógico y matemático en el aula.</p>
+        <p>- ENVÍO GRATUITO por compras sobre 30 unidades</p>
+        <p>- Servicio Post-Venta personalizado para cada cliente</p>
+        <p>- Garantía de aprendizaje para alumnos</p>
+        <p>- Soporte 24/7</p>
+        <p>- Más beneficios personalizados para tu compra</p>
+      </div>
+      <div class="benefit">
+        <h3>Para Familias</h3>
+        <p>- Convierte el aprendizaje en un momento de diversión compartida.</p>
+        <p>- Instructivo impreso, diseñado para niños y adultos</p>
+        <p>- Garantía para tu juego!</p>
+        <p>- Más beneficios para tu familia</p>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-jugar" class="section">
+    <h2>Cómo se juega</h2>
+    <p>Strategy combina desafíos matemáticos con dinámicas de estrategia. 
+       Cada jugador debe resolver problemas para avanzar en el tablero.</p>
+    <p>Elige tu dificultad</p>
+    <p>Consigue puntos resolviendo problemas matemáticos</p>
+    <p>Obten más puntos que nadie</p>
+    <p>GANA!</p>
+  </section>
+
+  <section id="comprar" class="section">
+    <h2>Compra Strategy</h2>
+    <p>Disponible para instituciones de educación y familias. Solicita tu cotización o compra en línea.</p>
+    <p>Compras presenciales disponibles en la próxima feria educacional de tu institución educativa</p>
+    <button>Comprar AQUI</button>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contactanos</h2>
+    <p>EMAIL: info@strategyjuego.com</p>
+    <p>WHATSAPP: +56 9 1234 45678</p>
+  </section>
+
+  <footer id="footer">
+    <p>Contacto: info@strategyjuego.com | Tel: +56 9 1234 5678</p>
+    <p>&copy; 2025 Strategy - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

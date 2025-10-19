@@ -1,0 +1,242 @@
+/* ---------- Box-sizing global ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Tipografía y cuerpo ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F9FAFB;
+  color: #111827;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+  background: #1E3A8A;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #F59E0B;
+}
+
+/* ---------- Sección principal (Hero) ---------- */
+.hero {
+  background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)),
+              url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.y0rxzl64DEwUUrxEtwOskAHaHa%3Fcb%3D12%26pid%3DApi&f=1&ipt=7afca7cbe5698c790977e42273e6dd4c85be603572305f61ed90a16a5d7aa720') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* ---------- Botones ---------- */
+button {
+  background: #10B981;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #34D399;
+  transform: scale(1.05);
+}
+
+/* ---------- Secciones ---------- */
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  color: #1E3A8A;
+  border-left: 5px solid #F59E0B;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Beneficios ---------- */
+.benefits {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.benefit {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.benefit h3 {
+  color: #F59E0B;
+  margin-bottom: 10px;
+}
+
+/* ---------- Modal ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+/* Botón de cierre */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #F59E0B;
+}
+
+/* ---------- Formularios dentro del modal ---------- */
+.modal-content .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.modal-content .formulario input,
+.modal-content .formulario select,
+.modal-content .formulario button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content .formulario button {
+  background: #10B981;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content .formulario button:hover {
+  background: #34D399;
+  transform: scale(1.02);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+  background: #111827;
+  color: #E5E7EB;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 0.95em;
+}
+
+footer a {
+  color: #F59E0B;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsividad ---------- */
+@media (max-width: 600px) {
+  .benefits {
+    flex-direction: column;
+  }
+
+  .modal-content {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .modal-content .formulario input,
+  .modal-content .formulario select,
+  .modal-content .formulario button {
+    font-size: 1em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
